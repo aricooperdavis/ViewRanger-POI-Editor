@@ -50,7 +50,7 @@ function workerMessage(event) {
 		var a = document.createElement("a");
 		document.body.appendChild(a);
 		a.href = window.URL.createObjectURL(blob);
-		a.download = "sql.db";
+		a.download = "ViewrangerObjects.db";
 		a.onclick = function () {
 			setTimeout(function () {
 				window.URL.revokeObjectURL(a.href);
