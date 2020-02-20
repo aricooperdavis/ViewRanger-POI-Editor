@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf8">
+    <title>ViewRanger POI Editor</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+  </head>
+
+  <body>
+    <h1>ViewRanger POI Editor</h1>
+    <p id="subtitle">Bulk edit the POIs in your ViewRanger Objects Database</p>
+
+    <main>
+      <p id="intro">
+        This site facilitates the editing of your ViewRanger POIs. Start by
+        uploading your Viewranger Objects Database and the POIs will be loaded
+        and displayed on the map. Then:
+        <ul id="instructions">
+          <li><b>Mouseover</b> a POI to see its name</li>
+          <li><b>Click</b> a POI to toggle whether or not the POI will be
+          included in the exported database.</li>
+          <li><b>Shift-click and drag</b> to select multiple POIs to toggle at
+          once</li>
+          <li><b>Reload</b> the page to start over.</li>
+        </ul>
+        Once you've made your changes you can export your database and the map
+        will be updated to display your new database. All of this is done in
+        your browser using JavaScript, so you're not transferring your database
+        files anywhere, which maximises your privacy and security. As such
+        you'll need <a href=https://updatemybrowser.org/>a modern browser</a>
+        to use this tool.
+      </p>
+      <div id="mapid"></div>
+      <br>
+      <div id="buttons">
+        <label class="button">
+          <input type='file' id='loadBtn'>
+        </label>
+        <button id='exportBtn' class="button">Export Database</button>
+      <div>
+    </main>
+
+    <footer>
+      <p>
+        A <a href=https://github.com>free and open source</a> project by <a
+        href=https://www.cooper-davis.net> Ari Cooper-Davis</a>, using <a
+        href=https://github.com/kripken/sql.js>sql.js</a> and <a
+        href=https://github.com/Leaflet/Leaflet>leaflet</a>.
+      </p>
+    </footer>
+
+    <!-- Load relevant JavaScripts -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <script type="text/javascript" src="vpe.alpha.js"></script>
+  </body>
+
+</html>
