@@ -70,14 +70,47 @@ worker.onmessage = workerMessage;
 loadBtn.addEventListener("change", loadDb, true);
 exportBtn.addEventListener("click", exportDb, true);
 
+// List of currently supported icons
+var svgIcons = ["activity", "building", "crossing", "farm", "fauna", "flora",
+	"forest", "helipad", "hutshelter", "jetty", "lodging", "medicalfacility",
+	"obstacle", "outdoorswimming", "peak", "picnicarea", "poi_green",
+	"poi_orange", "poi_purple", "poi_red", "pub", "publictoilets", "restaurant",
+	"shop", "steeprocks", "touristinformation", "turnleft", "turnright",
+	"viewpoint", "warningflag", "water", "waterfall", "wildcamping"];
+for (var i = 1; i <= 30; i++){
+	svgIcons.push(i.toString());
+};
+var pngIcons = ["dot", "geocache", "parking"];
+
 // ----------------- LEAFLET: Setup --------------------------
 
 function plotPOIs(valuesArray) {
 	/* Populate the dictionary of pois and plot them on the map */
 	for (var i = 0; i < valuesArray.length; i++) {
 		// Loop through and add to Leaflet map layer
+		if (svgIcons.includes(valuesArray[i][16])) {
+			var markerIcon = new L.Icon({
+				iconUrl: '/resources/markers/svgs/'+valuesArray[i][16]+'.svg',
+				iconSize: [20, 20],
+				iconAnchor: [10, 10]
+			});
+		} else if (pngIcons.includes(valuesArray[i][16])) {
+			var markerIcon = new L.Icon({
+				iconUrl: '/resources/markers/pngs/'+valuesArray[i][16]+'.png',
+				iconSize: [20, 20],
+				iconAnchor: [10, 10]
+			});
+		} else if (!valuesArray[i][16]) {
+			var markerIcon = new L.Icon({
+				iconUrl: '/resources/markers/svgs/poi_yellowdefault.svg',
+				iconSize: [20, 20],
+				iconAnchor: [10, 10]
+			});
+		} else {
+			var markerIcon = new L.Icon.Default;
+		};
 		var marker = L.marker([valuesArray[i][7], valuesArray[i][8]],
-			{title:valuesArray[i][2], uniqueID:valuesArray[i][3]});
+			{title:valuesArray[i][2], icon: markerIcon, uniqueID:valuesArray[i][3]});
 		marker.on('click', togglePOI);
 		marker.addTo(poiGroup);
 		// Add marker to visibility reference dictionary default visible

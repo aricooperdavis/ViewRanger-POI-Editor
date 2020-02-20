@@ -3,7 +3,7 @@
 
 [ViewRanger POI Editor](https://aricooperdavis.github.io/ViewRanger-POI-Editor/) is a site, written in JavaScript, that enables you to visualise and bulk edit the POIs in your ViewRanger Database.
 
-![Screenshot of the User Interface](screenshot.png)
+![Screenshot of the User Interface](resources/screenshot.png)
 
 ## Background
 [ViewRanger](https://www.viewranger.com/en-gb) is a mapping service that allows you to navigate, plot routes, and add Points of Interest (POIs) to maps on your mobile device. However, it is notoriously difficult to bulk edit your POIs, and the interface for editing them requires you to click one by one on the POIs to delete them. There must be a better way?
@@ -24,7 +24,7 @@ Then, in your browser navigate to:
 And you will be able to use the site.
 
 ### Using the Site
-[The site](https://aricooperdavis.github.io/ViewRanger-POI-Editor/) is pretty self explanatory; simply upload your ViewRanger Objects Database and click POIs to toggle them off. Shift-click and drag to toggle multiple POIs in a bounding box.
+[The site](https://aricooperdavis.github.io/ViewRanger-POI-Editor/) is pretty self explanatory; simply upload your ViewRanger Objects Database and click POIs to toggle them off. Shift-click and drag to toggle multiple POIs in a bounding box. Most Viewranger icons are supported, and those that aren't are replaced by a default blue pin.
 
 When you're done click `Export` and you can download your new Database file. I recommend making a backup of your original `ViewrangerObjects.db` rather than overwriting it, just in case.
 
