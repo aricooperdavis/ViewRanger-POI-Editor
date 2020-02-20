@@ -23,16 +23,16 @@ Then, in your browser navigate to:
 
 And you will be able to use the site.
 
-### Using the Site
+## Using the Site
 [The site](https://aricooperdavis.github.io/ViewRanger-POI-Editor/) is pretty self explanatory; simply upload your ViewRanger Objects Database and click POIs to toggle them off. Shift-click and drag to toggle multiple POIs in a bounding box. Most Viewranger icons are supported, and those that aren't are replaced by a default blue pin.
 
 When you're done click `Export` and you can download your new Database file. I recommend making a backup of your original `ViewrangerObjects.db` rather than overwriting it, just in case.
 
-#### The Viewranger Objects Database
-##### Android
+### The Viewranger Objects Database
+#### Android
 In ViewRanger navigate to your `Settings`, and scroll down to `Storage`. Your `Default Folder` path should be displayed. The file that you need to upload to the site is in this folder, and is called `ViewrangerObjects.db`.
 
-##### iOS
+#### iOS
 I don't have an iOS device so don't know where the ViewRanger Databse file is stored, or whether it's even accessible to non-rooted users. If you know, then please feel free to update this README.
 
 ## Contributing
