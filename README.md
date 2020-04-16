@@ -37,3 +37,6 @@ I don't have an iOS device so don't know where the ViewRanger Databse file is st
 
 ## Contributing
 Please do - by filing any [issues](https://github.com/aricooperdavis/ViewRanger-POI-Editor/issues) you encounter or any [enhancements](https://github.com/aricooperdavis/ViewRanger-POI-Editor/labels/enhancement) you can think of, or even better by coding up those improvements yourself and making a [pull request](https://github.com/aricooperdavis/ViewRanger-POI-Editor/pulls).
+
+## Acknowledgements
+Many thanks to the developers of [sql.js](https://github.com/kripken/sql.js/) and [Leaflet](https://github.com/Leaflet/Leaflet) whos exceptional hard work made this project simple.
