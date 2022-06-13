@@ -1,5 +1,5 @@
 # ViewRanger POI Editor
-*Bulk edit the POIs in your ViewRanger Database*
+*Bulk edit the POIs in your ViewRanger Database.*
 
 [ViewRanger POI Editor](https://aricooperdavis.github.io/ViewRanger-POI-Editor/) is a site, written in JavaScript, that enables you to visualise and bulk edit the POIs in your ViewRanger Database.
 
